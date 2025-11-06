@@ -8,3 +8,14 @@ if num <= 0:
     exit()
 else:
     print(f"{num} participants will be registered.\n")
+
+participants = []
+
+for i in range(num):
+    name = input("Enter participant name: ")
+    track = input("Enter chosen track: ")
+    participants.append({"name": name, "track": track})
+
+print("\nRegistered Participants:")
+for i, p in enumerate(participants, start=1):
+    print(f"{i}. {p['name']} - {p['track']}")
