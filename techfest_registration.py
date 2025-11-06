@@ -19,3 +19,11 @@ for i in range(num):
 print("\nRegistered Participants:")
 for i, p in enumerate(participants, start=1):
     print(f"{i}. {p['name']} - {p['track']}")
+
+tracks = {p['track'] for p in participants}
+
+print("\nTracks offered in this event:")
+print(", ".join(tracks))
+
+if len(tracks) < 2:
+    print("Not enough variety in tracks.")
